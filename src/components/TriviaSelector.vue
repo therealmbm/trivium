@@ -45,11 +45,10 @@ function selectRandom() {
   openLink();
 }
 </script>
-
 <template>
-  <div class="p-10 bg-purple">
+  <div class="p-6 sm:p-10 bg-purple">
     <!-- Page Title -->
-    <h1 class="text-white text-4xl font-bold mb-6 place-self-center">Start Trivia</h1>
+    <h1 class="text-white text-4xl font-bold mb-6 text-center">Start Trivia</h1>
 
     <!-- Page Introduction -->
     <p class="text-white text-lg mb-6 text-center">
@@ -59,8 +58,8 @@ function selectRandom() {
     </p>
 
     <!-- Trivia Selection Form -->
-    <form class="flex flex-wrap gap-4 place-self-center" @submit.prevent="openLink">
-      <div class="flex flex-col w-full md:w-auto">
+    <form class="flex flex-col sm:flex-row sm:gap-6 gap-4 justify-center" @submit.prevent="openLink">
+      <div class="flex flex-col w-full sm:w-auto">
         <label for="trivia-category" class="text-white mb-2">Select Category</label>
         <select v-model="category" name="trivia-category" id="trivia-category" class="select">
           <option value="" disabled selected hidden>Select Category</option>
@@ -68,7 +67,7 @@ function selectRandom() {
         </select>
       </div>
 
-      <div class="flex flex-col w-full md:w-auto">
+      <div class="flex flex-col w-full sm:w-auto">
         <label for="trivia-difficulty" class="text-white mb-2">Select Difficulty</label>
         <select v-model="difficulty" name="trivia-difficulty" id="trivia-difficulty" class="select">
           <option value="" disabled selected hidden>Select Difficulty</option>
@@ -76,18 +75,18 @@ function selectRandom() {
         </select>
       </div>
 
-      <div class="flex flex-col w-full md:w-auto">
+      <div class="flex flex-col w-full sm:w-auto">
         <label for="num-questions" class="text-white mb-2">Number of Questions</label>
         <input v-model="numQuestions" type="number" name="num-questions" id="num-questions" class="input" min="1"
           max="50" />
       </div>
 
       <!-- Start Button -->
-      <button type="submit" class="button-primary text-lg py-1 px-8 h-min mt-auto">Start</button>
+      <button type="submit" class="button-primary text-lg py-1 px-8 h-min mt-6 sm:mt-0 sm:ml-6">Start</button>
     </form>
 
     <!-- Random Button Section -->
-    <div class="place-items-center mt-8">
+    <div class="place-items-center mt-8 text-center">
       <h1 class="text-white text-3xl font-bold mt-6 mb-4">OR</h1>
       <p class="text-white text-lg mb-4">Feeling adventurous? Play a random trivia quiz with randomly selected
         categories and difficulty.</p>

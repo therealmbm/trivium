@@ -1,28 +1,34 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-
 </script>
 
 <template>
-  <div class="bg-purple grid lg:grid-cols-2 sm:grid-cols-1 gap-4 h-min py-10">
-    <div class=" text-white m-36">
-      <h1 class="text-5xl font-bold">Discover 10,000+ Trivia Questions Across a Wide Range of Categories!</h1>
-      <h3 class="text-2xl my-3">
+  <div class="bg-purple grid lg:grid-cols-2 grid-cols-1 gap-6 items-center px-8 py-10">
+    <!-- Left Content -->
+    <div class="text-white space-y-6">
+      <h1 class="text-4xl lg:text-5xl font-bold">
+        Discover 10,000+ Trivia Questions Across a Wide Range of Categories!
+      </h1>
+      <h3 class="text-lg lg:text-2xl">
         Test your knowledge, explore new topics, and challenge friends today.
       </h3>
-      <button class="button-primary text-xl p-3 px-12 font-bold">
+      <div class="space-x-4">
         <RouterLink to="/trivia">
-          Start Trivia
+          <button class="button-primary text-xl py-3 px-6 font-bold my-3">
+            Start Trivia
+          </button>
         </RouterLink>
-      </button>
-      <button class="button-secondary text-xl p-3 ms-5 font-bold">
         <RouterLink to="/category">
-          Explore Questions
+          <button class="button-secondary text-xl py-3 px-6 font-bold my-3">
+            Explore Questions
+          </button>
         </RouterLink>
-      </button>
+      </div>
     </div>
-    <div class=" h-96 ms-36">
-      <img src="@/assets/hero.png" alt="hero-img" class="w-fit">
+
+    <!-- Right Content -->
+    <div class="flex justify-center lg:justify-end">
+      <img src="@/assets/hero.png" alt="hero-img" class="w-full max-w-md lg:max-w-lg">
     </div>
   </div>
 </template>

@@ -17,27 +17,30 @@ const leaderboardWithRank = computed(() => {
 </script>
 
 <template>
-  <div class="leaderboard m-10">
-    <header class="flex place-self-center">
-      <img width="100" height="100" src="https://img.icons8.com/avantgarde/100/medal.png" alt="medal" />
-      <h1 class="font-bold text-5xl text-purple py-4">LEADERBOARD</h1>
-      <img width="100" height="100" src="https://img.icons8.com/avantgarde/100/medal.png" alt="medal" />
+  <div class="leaderboard m-4 sm:m-10">
+    <!-- Header Section -->
+    <header class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+      <img width="80" height="80" src="https://img.icons8.com/avantgarde/100/medal.png" alt="medal" />
+      <h1 class="font-bold text-3xl sm:text-5xl text-purple py-4">LEADERBOARD</h1>
+      <img width="80" height="80" src="https://img.icons8.com/avantgarde/100/medal.png" alt="medal" />
     </header>
-    <div class="board m-10 w-2/3 place-self-center text-center">
-      <table class="table-auto w-full text-white bg-purple">
+
+    <!-- Leaderboard Table -->
+    <div class="board m-4 sm:m-10 w-full sm:w-2/3 place-self-center text-center">
+      <table class="table-auto w-full text-white bg-purple rounded-lg shadow-md">
         <thead class="bg-purple-dark">
           <tr>
-            <th class="px-4 py-2 text-xl">Rank</th>
-            <th class="px-4 py-2 text-xl">Player</th>
-            <th class="px-4 py-2 text-xl">Score</th>
+            <th class="px-4 py-2 text-sm sm:text-xl">Rank</th>
+            <th class="px-4 py-2 text-sm sm:text-xl">Player</th>
+            <th class="px-4 py-2 text-sm sm:text-xl">Score</th>
           </tr>
         </thead>
         <tbody class="bg-purple">
           <!-- Loop through sorted leaderboard with rank -->
           <tr v-for="entry in leaderboardWithRank" :key="entry.rank">
-            <td class="px-4 py-2 text-md">{{ entry.rank }}</td>
-            <td class="px-4 py-2 text-md">{{ entry.player }}</td>
-            <td class="px-4 py-2 text-md">{{ entry.score }}%</td>
+            <td class="px-4 py-2 text-xs sm:text-md">{{ entry.rank }}</td>
+            <td class="px-4 py-2 text-xs sm:text-md">{{ entry.player }}</td>
+            <td class="px-4 py-2 text-xs sm:text-md">{{ entry.score }}%</td>
           </tr>
         </tbody>
       </table>

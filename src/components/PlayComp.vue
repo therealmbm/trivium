@@ -156,15 +156,14 @@ function showFinalScoreModal() {
   });
 }
 </script>
-
 <template>
   <div v-if="data.length > 0">
     <div class="card">
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
         <p class="me-auto">Question {{ currentQuestionIndex + 1 }} of {{ data.length }}</p>
         <p class="ms-auto">Difficulty: {{ difficulty }}</p>
         <p class="me-auto">Score: {{ score }}/{{ data.length }}</p>
-        <p class="ms-auto">Category: {{ getCategoryName(category) }}</p> <!-- Updated to show category name -->
+        <p class="ms-auto">Category: {{ getCategoryName(category) }}</p>
       </div>
       <div class="cardHeader">{{ data[currentQuestionIndex].question }}</div>
       <div class="cardBody">
