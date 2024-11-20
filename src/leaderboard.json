@@ -1,0 +1,30 @@
+[
+    {
+        "player": "Bilal",
+        "score": 20
+    },
+    {
+        "player": "Alice",
+        "score": 12
+    },
+    {
+        "player": "Bob",
+        "score": 9
+    },
+    {
+        "player": "Charlie",
+        "score": 15
+    },
+    {
+        "player": "Diana",
+        "score": 11
+    },
+    {
+        "player": "Eve",
+        "score": 13
+    },
+    {
+        "player": "Frank",
+        "score": 10
+    }
+]

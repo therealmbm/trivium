@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  @apply px-4 py-2 text-white font-bold rounded hover:bg-purple;
+}
+.button-primary {
+  @apply bg-yellow text-white rounded-lg transition ease-in-out  hover:scale-110 duration-200;
+}
+.button-secondary {
+  @apply bg-white text-purple border-2 border-white rounded-lg transition ease-in-out  hover:scale-110 duration-200;
+}
+.card {
+  @apply w-1/2 place-self-center m-10;
+}
+.cardHeader {
+  @apply text-white text-2xl font-bold p-5 bg-purple-dark rounded-t-2xl;
+}
+.cardBody {
+  @apply bg-white rounded-b-xl p-5 border-8  border-purple-dark;
+}
+.select,
+.input {
+  @apply w-full sm:w-auto p-2  grid grid-cols-2  gap-4 rounded focus:outline-none focus:ring-2 focus:ring-purple;
+}
+.options {
+  @apply bg-purple text-white font-semibold p-4 rounded-lg border-2 text-center hover:bg-white hover:text-purple hover:border-purple cursor-pointer;
+}
+tr {
+  @apply border-b-2 border-white;
+}
+td {
+  @apply px-4 py-2 text-lg;
+}
+.list {
+  @apply grid grid-cols-4 gap-4 font-bold text-xl;
+}
+.entry {
+  @apply hover:bg-white hover:text-purple rounded-md p-3;
+}
